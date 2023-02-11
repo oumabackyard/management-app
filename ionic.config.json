@@ -1,0 +1,8 @@
+{
+  "name": "management_app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "0fc4c051"
+}
