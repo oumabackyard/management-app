@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <h4>Listes des annonces</h4> 
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-icon slot="icon-only" routerLink="/add" name="add-outline"></ion-icon>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item [routerLink]="['/annonce-details', annonce.id]" *ngFor="let annonce of tab">
+      <ion-thumbnail>
+        <img alt="Silhouette of mountains" [src]="annonce.mainImage" />
+      </ion-thumbnail>
+      <ion-label>{{ annonce.titre }} </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+

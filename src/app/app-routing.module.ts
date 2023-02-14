@@ -15,6 +15,19 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'annonces',
+    loadChildren: () => import('./annonces/annonces.module').then( m => m.AnnoncesPageModule)
+  },
+  {
+    path: 'annonce-details/:id',
+    loadChildren: () => import('./annonce-details/annonce-details.module').then( m => m.AnnonceDetailsPageModule)
+  },  {
+    path: 'add-annonce',
+    loadChildren: () => import('./add-annonce/add-annonce.module').then( m => m.AddAnnoncePageModule)
+  },
+
+
 ];
 
 @NgModule({
