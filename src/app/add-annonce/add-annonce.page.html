@@ -1,9 +1,35 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>add-annonce</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/annonces"></ion-back-button>
+    </ion-buttons>
+    <ion-title><h4>Add annonce</h4></ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="ion-margin">
+    <form #f="ngForm">
+      <label for="titre">Title</label>
+      <input ngModel class="form-control" type="text" name="titre" id="titre">
+      <label for="prix">Prix</label>
+      <input ngModel class="form-control" type="text" name="prix" id="prix">
+      <label for="category">Categorie</label>
+      <input ngModel class="form-control" type="text" name="category" id="category">
+      <label for="nomn">Nom</label>
+      <input ngModel class="form-control" type="text" name="nom" id="nom">
+      <label for="telephone">Telephone</label>
+      <input ngModel class="form-control" type="text" name="telephone" id="telephone">
+      <label for="localisation">Localisation</label>
+      <input ngModel class="form-control" type="text" name="localisation" id="localisation">
+      <label for="description">Description</label>
+      <input ngModel class="form-control" type="text" name="description" id="description">
+      <label for="mainImage">Image</label>
+      <input ngModel class="form-control" type="url" name="mainImage" id="mainImage">
+
+
+      <ion-button color="primary" (click)="addNewAnnonce(f.value)">Add</ion-button>
+    </form>
+  </div>
 
 </ion-content>

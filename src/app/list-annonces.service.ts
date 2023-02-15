@@ -31,6 +31,12 @@ export class ListAnnoncesService {
     },
   ];
 
+  addAnnonce(newAnnonce){
+    newAnnonce.id = this.tabAnnonces[this.tabAnnonces.length - 1].id + 1;
+    newAnnonce['listOfImage'] = newAnnonce['listOfImage'].split(',');
+    this.tabAnnonces.push(newAnnonce);
+  }
+
   getAllAnnonces() {
     return this.tabAnnonces;
   } 

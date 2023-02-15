@@ -14,4 +14,8 @@ export class AnnoncesPage implements OnInit {
     this.tab = this.listAnnonces.getAllAnnonces();
   }
 
+  ionViewDidEnter(){
+    this.tab = this.listAnnonces.getAllAnnonces();
+  }
+
 }

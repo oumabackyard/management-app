@@ -23,7 +23,7 @@ export class AnnonceDetailsPage implements OnInit {
   async showAlert() {
     const alert = await this.alertCtrl.create({
       header: 'Confirmation',
-      message: 'Are you sure to delete this annonce ?',
+      message: 'Do you want to delete this annonce ?',
       buttons: [
         {
           text: 'No',

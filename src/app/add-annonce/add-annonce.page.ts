@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ListAnnoncesService } from '../list-annonces.service';
 
 @Component({
   selector: 'app-add-annonce',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddAnnoncePage implements OnInit {
 
-  constructor() { }
+  constructor(private annonceSer : ListAnnoncesService,
+    private router : Router) { }
 
   ngOnInit() {
+  }
+
+  addNewAnnonce(valueForm){
+    this.annonceSer.addAnnonce(valueForm);
+    this.router.navigateByUrl('/annonces');
+
   }
 
 }
