@@ -46,7 +46,9 @@ export class ListAnnoncesService {
   }
 
   deleteAnnonce(id){
-    this.tabAnnonces = this.tabAnnonces.filter((c) => c.id != id)
+    // this.tabAnnonces = this.tabAnnonces.filter((c) => c.id != id)
+    let filtredItems = this.tabAnnonces.filter((c) => c.id !== id);
+    this.tabAnnonces.splice(0, this.tabAnnonces.length, ...filtredItems);
   }
 
   constructor() { }

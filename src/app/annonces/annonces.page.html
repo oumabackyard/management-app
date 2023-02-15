@@ -16,10 +16,10 @@
 <ion-content>
   <ion-list>
     <ion-item [routerLink]="['/annonce-details', annonce.id]" *ngFor="let annonce of tab">
-      <ion-thumbnail>
-        <img alt="Silhouette of mountains" [src]="annonce.mainImage" />
-      </ion-thumbnail>
-      <ion-label>{{ annonce.titre }} </ion-label>
+      <ion-avatar>
+        <img alt="annonce image" [src]="annonce.mainImage" />
+      </ion-avatar>
+      <ion-label>{{ annonce.titre }} </ion-label> <ion-label>{{ annonce.price }} € </ion-label> <ion-label>disponible à {{annonce.localisation}}</ion-lable>
     </ion-item>
   </ion-list>
 

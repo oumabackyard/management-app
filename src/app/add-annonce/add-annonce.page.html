@@ -13,13 +13,13 @@
       <label for="titre">Title</label>
       <input ngModel class="form-control" type="text" name="titre" id="titre">
       <label for="prix">Prix</label>
-      <input ngModel class="form-control" type="text" name="prix" id="prix">
+      <input ngModel class="form-control" type="number" step="0.1" name="prix" id="prix">
       <label for="category">Categorie</label>
       <input ngModel class="form-control" type="text" name="category" id="category">
       <label for="nomn">Nom</label>
       <input ngModel class="form-control" type="text" name="nom" id="nom">
       <label for="telephone">Telephone</label>
-      <input ngModel class="form-control" type="text" name="telephone" id="telephone">
+      <input ngModel class="form-control" type="tel" name="telephone" id="telephone">
       <label for="localisation">Localisation</label>
       <input ngModel class="form-control" type="text" name="localisation" id="localisation">
       <label for="description">Description</label>
@@ -27,8 +27,9 @@
       <label for="mainImage">Image</label>
       <input ngModel class="form-control" type="url" name="mainImage" id="mainImage">
 
-
+     
       <ion-button color="primary" (click)="addNewAnnonce(f.value)">Add</ion-button>
+      <ion-button color="secondary" (click)="onReset(f)">Cancel</ion-button>
     </form>
   </div>
 
